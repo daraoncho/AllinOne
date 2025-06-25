@@ -1,4 +1,5 @@
 import daraImage from "../assets/Images/dara.jpeg";
+import thumbnail from "../assets/Images/photobooth_thumbnail.jpg"
 // Import your custom video
 // import customVideo from "../assets/video/Custom-Video.mp4";
 
@@ -152,7 +153,7 @@ export const featuredVideo = {
   description: "Capture and edit memories",
   platform: "tiktok",
   url: "https://vm.tiktok.com/ZMS99BHDs/",
-  customThumbnail: "", // Optional: add a custom thumbnail
+  customThumbnail: thumbnail,
   aspectRatio: "9:16"
 };
 
