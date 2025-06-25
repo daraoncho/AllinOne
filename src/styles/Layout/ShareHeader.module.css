@@ -9,7 +9,7 @@
   animation-delay: 0.2s;
 }
 
-.menuButton {
+.shareButton {
   width: 48px;
   height: 48px;
   background: #475569;
@@ -23,19 +23,36 @@
   color: #e2e8f0;
 }
 
-.menuButton:hover {
+.shareButton:hover {
   background: #64748b;
   border-color: #94a3b8;
   transform: scale(1.1);
 }
 
-.menuButton:active {
+.shareButton:active {
   transform: scale(0.95);
+}
+
+.shareButton:focus-visible {
+  outline: 2px solid #67e8f9;
+  outline-offset: 2px;
 }
 
 @keyframes fadeInDown {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    top: 12px;
+    right: 12px;
+  }
+  
+  .shareButton {
+    width: 44px;
+    height: 44px;
   }
 }

@@ -23,6 +23,11 @@ const HeroSection = () => {
         {personalInfo.name}
       </h3>
 
+      {/* Added subtitle */}
+      <p className={styles.jobTitle}>
+        {personalInfo.subtitle}
+      </p>
+
       <div className={styles.location}>
         <IconRenderer name="location" className={styles.locationIcon} />
         {personalInfo.location}

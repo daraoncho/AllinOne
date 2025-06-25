@@ -1,4 +1,4 @@
-import Header from "../../components/Header/Header";
+import ShareHeader from "../../components/Header/ShareHeader";
 import HeroSection from "../../components/Hero/HeroSection";
 import TopLinks from "../../components/Links/TopLinks";
 import SocialLinks from "../../components/Links/SocialLinks";
@@ -12,8 +12,8 @@ const Home = () => {
       <div className={styles.backgroundPattern} />
       <div className={styles.backgroundOverlay} />
       
-      {/* Header */}
-      <Header />
+      {/* Share Header */}
+      <ShareHeader />
 
       {/* Main Content */}
       <main className={styles.main}>

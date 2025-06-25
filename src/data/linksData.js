@@ -1,17 +1,17 @@
-import daraImage from '../assets/Images/dara.jpeg';
-
+import daraImage from "../assets/Images/dara.jpeg";
 
 export const personalInfo = {
   name: "Dara",
   fullName: "Adebayo Oluwadarasimi",
+  subtitle: "Software Engineer",
   location: "Nigeria",
   profileImage: daraImage,
   description: [
     "Hi, i'm Adebayo Oluwadarasimi,",
-    "a computer science major at Ekiti State University",
-    "an aspiring software engineer and game developer."
+    "a high-distinction Computer Science Graduate from Ekiti State University",
+    "founder of HashTag.",
   ],
-  websiteUrl: "https://dara-links.netlify.app"
+  websiteUrl: "https://dara-links.netlify.app",
 };
 
 export const topSocialLinks = [
@@ -19,26 +19,26 @@ export const topSocialLinks = [
     id: "email",
     href: "mailto:adebayooluwadarasimi1@gmail.com",
     icon: "mail",
-    label: "Email"
+    label: "Email",
   },
   {
     id: "tiktok",
     href: "https://www.tiktok.com/@daraoncho",
     icon: "tiktok",
-    label: "TikTok"
+    label: "TikTok",
   },
   {
     id: "github",
     href: "https://github.com/daraoncho",
     icon: "github",
-    label: "GitHub"
+    label: "GitHub",
   },
   {
     id: "linkedin",
     href: "https://www.linkedin.com/in/me/",
     icon: "linkedin",
-    label: "LinkedIn"
-  }
+    label: "LinkedIn",
+  },
 ];
 
 export const mainLinks = [
@@ -48,7 +48,7 @@ export const mainLinks = [
     description: "cool stuffs",
     href: "https://www.instagram.com/daraoncho",
     icon: "instagram",
-    bgColor: "instagram"
+    bgColor: "instagram",
   },
   {
     id: "youtube",
@@ -56,7 +56,7 @@ export const mainLinks = [
     description: "longer vlogs",
     href: "https://www.youtube.com/channel/UCF0azJUVy3xkSdsCCA_p3eA",
     icon: "youtube",
-    bgColor: "youtube"
+    bgColor: "youtube",
   },
   {
     id: "portfolio",
@@ -64,7 +64,7 @@ export const mainLinks = [
     description: "Portfolio Website",
     href: "https://daraa.netlify.app",
     icon: "home",
-    bgColor: "portfolio"
+    bgColor: "portfolio",
   },
   {
     id: "blog",
@@ -72,7 +72,7 @@ export const mainLinks = [
     description: "My thoughts and articles",
     href: "https://dara-bloggy.netlify.app/",
     icon: "book",
-    bgColor: "blog"
+    bgColor: "blog",
   },
   {
     id: "random",
@@ -80,6 +80,6 @@ export const mainLinks = [
     description: "Stay motivated",
     href: "#",
     icon: "bolt",
-    bgColor: "random"
-  }
+    bgColor: "random",
+  },
 ];

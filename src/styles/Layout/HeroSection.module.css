@@ -38,10 +38,21 @@
   font-size: 1.25rem;
   font-weight: 600;
   color: #fff;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   opacity: 0;
   animation: fadeIn 0.6s ease forwards;
   animation-delay: 0.4s;
+}
+
+/* New subtitle styling */
+.jobTitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #67e8f9;
+  margin-bottom: 12px;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+  animation-delay: 0.45s;
 }
 
 .location {
@@ -85,5 +96,19 @@
 @keyframes fadeIn {
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .name {
+    font-size: 1.125rem;
+  }
+
+  .jobTitle {
+    font-size: 0.9rem;
   }
 }
