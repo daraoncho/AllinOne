@@ -1,0 +1,101 @@
+.container {
+  display: block;
+  width: 100%;
+  max-width: 28rem;
+  margin: 0 auto;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.card {
+  position: relative;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: scale(1.02) translateY(-2px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+/* Background gradients */
+.instagram {
+  background: linear-gradient(135deg, #e91e63, #9c27b0);
+}
+
+.youtube {
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+}
+
+.portfolio {
+  background: linear-gradient(135deg, #2196f3, #3f51b5);
+}
+
+.blog {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+}
+
+.random {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+
+.iconContainer {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon {
+  color: white;
+  font-size: 32px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.content {
+  margin-left: 64px;
+  color: white;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 4px;
+}
+
+.description {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

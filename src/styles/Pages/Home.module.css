@@ -1,0 +1,63 @@
+.container {
+  min-height: 100vh;
+  background: #0f172a;
+  color: #f1f5f9;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.backgroundPattern {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+}
+
+.backgroundOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(120, 119, 198, 0.1), transparent 50%);
+}
+
+.main {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.contentWrapper {
+  width: 100%;
+  max-width: 512px;
+  margin: 0 auto;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    padding: 16px 12px;
+  }
+  
+  .contentWrapper {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 12px 8px;
+  }
+}

@@ -1,0 +1,89 @@
+.section {
+  text-align: center;
+  margin-bottom: 32px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.titleSection {
+  margin-bottom: 32px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 0.6s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #cbd5e1;
+}
+
+.imageContainer {
+  margin-bottom: 16px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: scaleIn 0.6s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 12px;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+  font-size: 0.875rem;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.locationIcon {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
