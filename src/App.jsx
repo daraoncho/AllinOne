@@ -6,7 +6,6 @@ import {
   useLocation,
 } from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
-import { LazyMotion, domAnimation } from "motion/react";
 import PageNotFound from "./pages/PageNotFound.jsx";
 
 const ScrollToTop = () => {
@@ -21,7 +20,6 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <LazyMotion features={domAnimation}>
       <div className="App">
         <Router>
           <ScrollToTop />
@@ -34,7 +32,6 @@ function App() {
           </main>
         </Router>
       </div>
-    </LazyMotion>
   );
 }
 
