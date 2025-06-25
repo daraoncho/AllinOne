@@ -8,11 +8,14 @@ import {
   FaBolt,
   FaLocationDot,
   FaShareNodes,
-  FaClone
+  FaClone,
+  FaUserGroup,
+  FaGamepad,
+  FaCamera,
+  FaPalette
 } from 'react-icons/fa6';
 import { FaTiktok } from 'react-icons/fa';
 import { AiFillHome } from "react-icons/ai";
-
 
 const iconMap = {
   mail: FaEnvelope,
@@ -26,7 +29,12 @@ const iconMap = {
   bolt: FaBolt,
   location: FaLocationDot,
   share: FaShareNodes,
-  clone: FaClone
+  clone: FaClone,
+  // New icons
+  userGroup: FaUserGroup,
+  gamepad: FaGamepad,
+  camera: FaCamera,
+  palette: FaPalette
 };
 
 const IconRenderer = ({ name, className = "", size = "1em", ...props }) => {

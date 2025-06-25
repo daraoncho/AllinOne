@@ -61,7 +61,7 @@ export const mainLinks = [
   {
     id: "portfolio",
     title: "Dara",
-    description: "Portfolio Website",
+    description: "portfolio Website",
     href: "https://daraa.netlify.app",
     icon: "home",
     bgColor: "portfolio",
@@ -69,17 +69,59 @@ export const mainLinks = [
   {
     id: "blog",
     title: "Dara | Blog",
-    description: "My thoughts and articles",
+    description: "my thoughts and articles",
     href: "https://dara-bloggy.netlify.app/",
     icon: "book",
     bgColor: "blog",
   },
   {
+    id: "studybuddy",
+    title: "StudyBuddy",
+    description: "Learn together, grow together",
+    href: "YOUR_STUDYBUDDY_LINK_HERE", // Replace with your link
+    icon: "userGroup",
+    bgColor: "studybuddy"
+  },
+  {
+    id: "wordrush",
+    title: "WordRush",
+    description: "Fast-paced word puzzle game",
+    href: "YOUR_WORDRUSH_LINK_HERE", // Replace with your link
+    icon: "gamepad",
+    bgColor: "wordrush"
+  },
+  {
+    id: "photobooth",
+    title: "PhotoBooth",
+    description: "Capture and edit memories",
+    href: "YOUR_PHOTOBOOTH_LINK_HERE", // Replace with your link
+    icon: "camera",
+    bgColor: "photobooth"
+  },
+  {
+    id: "artgallery",
+    title: "Art Gallery",
+    description: "My creative digital artwork",
+    href: "YOUR_ART_GALLERY_LINK_HERE", // Replace with your link
+    icon: "palette",
+    bgColor: "artgallery"
+  },
+  {
     id: "random",
-    title: "Random stuffs",
-    description: "Stay motivated",
+    title: "Stay Disciplined",
+    description: "coming soon",
     href: "#",
     icon: "bolt",
-    bgColor: "random",
-  },
+    bgColor: "random"
+  }
 ];
+
+// New featured video data
+export const featuredVideo = {
+  id: "featured-video",
+  title: "Latest Project Showcase",
+  description: "Watch my latest work and projects in action",
+  videoId: "YOUR_YOUTUBE_VIDEO_ID", // Replace with actual YouTube video ID
+  thumbnail: "https://img.youtube.com/vi/YOUR_YOUTUBE_VIDEO_ID/maxresdefault.jpg", // Will be auto-generated
+  duration: "5:30" // Optional: video duration
+};
