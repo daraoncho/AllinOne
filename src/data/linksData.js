@@ -55,7 +55,7 @@ export const mainLinks = [
   {
     id: "photobooth",
     title: "PhotoBooth",
-    description: "Capture and edit memories",
+    description: "capture and edit memories",
     href: "https://snapstalgia.netlify.app",
     icon: "camera",
     bgColor: "photobooth"
@@ -120,14 +120,14 @@ export const mainLinks = [
 
 // YouTube Video Configuration
 // https://youtu.be/H0NFTIhxOpc?si=87tKSabHYQRWQJjy
-export const featuredVideo = {
-  id: "featured-video",
-  title: "My Latest Project",
-  description: "Check out my recent work and development process",
-  platform: "youtube",
-  videoId: "H0NFTIhxOpc",
-  aspectRatio: "16:9"
-};
+// export const featuredVideo = {
+//   id: "featured-video",
+//   title: "My Latest Project",
+//   description: "Check out my recent work and development process",
+//   platform: "youtube",
+//   videoId: "H0NFTIhxOpc",
+//   aspectRatio: "16:9"
+// };
 
 // Alternative configurations (uncomment the one you want to test):
 
@@ -145,17 +145,17 @@ export const featuredVideo = {
 */
 
 // TikTok Video Configuration
-/*
+
 export const featuredVideo = {
   id: "featured-video",
-  title: "Quick Dev Tips",
-  description: "Fast coding tricks and shortcuts",
+  title: "I built a phoothbooth app",
+  description: "Capture and edit memories",
   platform: "tiktok",
-  url: "https://vm.tiktok.com/ZMS9adeYj/",
+  url: "https://vm.tiktok.com/ZMS99BHDs/",
   customThumbnail: "", // Optional: add a custom thumbnail
   aspectRatio: "9:16"
 };
-*/
+
 
 // Custom Video Configuration
 
