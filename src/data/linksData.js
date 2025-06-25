@@ -1,6 +1,6 @@
 import daraImage from "../assets/Images/dara.jpeg";
 // Import your custom video
-import customVideo from "../assets/video/Custom-Video.mp4";
+// import customVideo from "../assets/video/Custom-Video.mp4";
 
 export const personalInfo = {
   name: "Dara",
@@ -45,20 +45,20 @@ export const topSocialLinks = [
 
 export const mainLinks = [
   {
-    id: "instagram",
-    title: "Instagram",
-    description: "cool stuffs",
-    href: "https://www.instagram.com/daraoncho",
-    icon: "instagram",
-    bgColor: "instagram",
+    id: "wordrush",
+    title: "WordRush",
+    description: "nostalgia childhood game (names, animals, places, things)",
+    href: "https://word-rush-game.netlify.app",
+    icon: "gamepad",
+    bgColor: "wordrush"
   },
   {
-    id: "youtube",
-    title: "Youtube",
-    description: "longer vlogs",
-    href: "https://www.youtube.com/channel/UCF0azJUVy3xkSdsCCA_p3eA",
-    icon: "youtube",
-    bgColor: "youtube",
+    id: "photobooth",
+    title: "PhotoBooth",
+    description: "Capture and edit memories",
+    href: "https://snapstalgia.netlify.app",
+    icon: "camera",
+    bgColor: "photobooth"
   },
   {
     id: "portfolio",
@@ -69,6 +69,30 @@ export const mainLinks = [
     bgColor: "portfolio",
   },
   {
+    id: "instagram",
+    title: "Instagram",
+    description: "cool stuffs",
+    href: "https://www.instagram.com/daraoncho",
+    icon: "instagram",
+    bgColor: "instagram",
+  },
+    {
+    id: "studybuddy",
+    title: "StudyBuddy",
+    description: "excel academically and make money",
+    href: "https://gostudybuddy.com",
+    icon: "userGroup",
+    bgColor: "studybuddy"
+  },
+  {
+    id: "youtube",
+    title: "Youtube",
+    description: "longer vlogs",
+    href: "https://www.youtube.com/channel/UCF0azJUVy3xkSdsCCA_p3eA",
+    icon: "youtube",
+    bgColor: "youtube",
+  },
+  {
     id: "blog",
     title: "Dara | Blog",
     description: "my thoughts and articles",
@@ -77,34 +101,10 @@ export const mainLinks = [
     bgColor: "blog",
   },
   {
-    id: "studybuddy",
-    title: "StudyBuddy",
-    description: "Learn together, grow together",
-    href: "YOUR_STUDYBUDDY_LINK_HERE",
-    icon: "userGroup",
-    bgColor: "studybuddy"
-  },
-  {
-    id: "wordrush",
-    title: "WordRush",
-    description: "Fast-paced word puzzle game",
-    href: "YOUR_WORDRUSH_LINK_HERE",
-    icon: "gamepad",
-    bgColor: "wordrush"
-  },
-  {
-    id: "photobooth",
-    title: "PhotoBooth",
-    description: "Capture and edit memories",
-    href: "YOUR_PHOTOBOOTH_LINK_HERE",
-    icon: "camera",
-    bgColor: "photobooth"
-  },
-  {
     id: "artgallery",
     title: "Art Gallery",
-    description: "My creative digital artwork",
-    href: "YOUR_ART_GALLERY_LINK_HERE",
+    description: "my creative digital artwork",
+    href: "/",
     icon: "palette",
     bgColor: "artgallery"
   },
@@ -112,7 +112,7 @@ export const mainLinks = [
     id: "random",
     title: "Stay Disciplined",
     description: "coming soon",
-    href: "#",
+    href: "/",
     icon: "bolt",
     bgColor: "random"
   }
