@@ -1,4 +1,6 @@
 import daraImage from "../assets/Images/dara.jpeg";
+// Import your custom video
+import customVideo from "../assets/video/Custom-Video.mp4";
 
 export const personalInfo = {
   name: "Dara",
@@ -78,7 +80,7 @@ export const mainLinks = [
     id: "studybuddy",
     title: "StudyBuddy",
     description: "Learn together, grow together",
-    href: "YOUR_STUDYBUDDY_LINK_HERE", // Replace with your link
+    href: "YOUR_STUDYBUDDY_LINK_HERE",
     icon: "userGroup",
     bgColor: "studybuddy"
   },
@@ -86,7 +88,7 @@ export const mainLinks = [
     id: "wordrush",
     title: "WordRush",
     description: "Fast-paced word puzzle game",
-    href: "YOUR_WORDRUSH_LINK_HERE", // Replace with your link
+    href: "YOUR_WORDRUSH_LINK_HERE",
     icon: "gamepad",
     bgColor: "wordrush"
   },
@@ -94,7 +96,7 @@ export const mainLinks = [
     id: "photobooth",
     title: "PhotoBooth",
     description: "Capture and edit memories",
-    href: "YOUR_PHOTOBOOTH_LINK_HERE", // Replace with your link
+    href: "YOUR_PHOTOBOOTH_LINK_HERE",
     icon: "camera",
     bgColor: "photobooth"
   },
@@ -102,7 +104,7 @@ export const mainLinks = [
     id: "artgallery",
     title: "Art Gallery",
     description: "My creative digital artwork",
-    href: "YOUR_ART_GALLERY_LINK_HERE", // Replace with your link
+    href: "YOUR_ART_GALLERY_LINK_HERE",
     icon: "palette",
     bgColor: "artgallery"
   },
@@ -116,12 +118,55 @@ export const mainLinks = [
   }
 ];
 
-// New featured video data
+// YouTube Video Configuration
+// https://youtu.be/H0NFTIhxOpc?si=87tKSabHYQRWQJjy
 export const featuredVideo = {
   id: "featured-video",
-  title: "Latest Project Showcase",
-  description: "Watch my latest work and projects in action",
-  videoId: "YOUR_YOUTUBE_VIDEO_ID", // Replace with actual YouTube video ID
-  thumbnail: "https://img.youtube.com/vi/YOUR_YOUTUBE_VIDEO_ID/maxresdefault.jpg", // Will be auto-generated
-  duration: "5:30" // Optional: video duration
+  title: "My Latest Project",
+  description: "Check out my recent work and development process",
+  platform: "youtube",
+  videoId: "H0NFTIhxOpc",
+  aspectRatio: "16:9"
 };
+
+// Alternative configurations (uncomment the one you want to test):
+
+// Instagram Reel Configuration
+/*
+export const featuredVideo = {
+  id: "featured-video",
+  title: "Behind the Scenes",
+  description: "Quick look at my development setup",
+  platform: "instagram",
+  url: "https://www.instagram.com/reel/DLFFsKQoci8/?igsh=cG5kZnBtMWk0N212",
+  customThumbnail: "", // Optional: add a custom thumbnail
+  aspectRatio: "9:16"
+};
+*/
+
+// TikTok Video Configuration
+/*
+export const featuredVideo = {
+  id: "featured-video",
+  title: "Quick Dev Tips",
+  description: "Fast coding tricks and shortcuts",
+  platform: "tiktok",
+  url: "https://vm.tiktok.com/ZMS9adeYj/",
+  customThumbnail: "", // Optional: add a custom thumbnail
+  aspectRatio: "9:16"
+};
+*/
+
+// Custom Video Configuration
+
+/*
+export const featuredVideo = {
+  id: "featured-video",
+  title: "Project Demo",
+  description: "Live demonstration of my latest application",
+  platform: "custom",
+  url: customVideo, // Using the imported video
+  customThumbnail: "", // Optional: add a custom thumbnail
+  aspectRatio: "16:9"
+};
+*/

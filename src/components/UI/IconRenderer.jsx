@@ -12,9 +12,11 @@ import {
   FaUserGroup,
   FaGamepad,
   FaCamera,
-  FaPalette
+  FaPalette,
+  FaPlay,
+  FaVideo
 } from 'react-icons/fa6';
-import { FaTiktok } from 'react-icons/fa';
+import { FaTiktok, FaVimeoV } from 'react-icons/fa';
 import { AiFillHome } from "react-icons/ai";
 
 const iconMap = {
@@ -34,7 +36,11 @@ const iconMap = {
   userGroup: FaUserGroup,
   gamepad: FaGamepad,
   camera: FaCamera,
-  palette: FaPalette
+  palette: FaPalette,
+  // Video icons
+  play: FaPlay,
+  video: FaVideo,
+  vimeo: FaVimeoV
 };
 
 const IconRenderer = ({ name, className = "", size = "1em", ...props }) => {
