@@ -13,21 +13,28 @@
   position: relative;
   padding: 24px;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   min-height: 80px;
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
   overflow: hidden;
+
+  /* Base dark theme styling */
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Subtle overlay for depth */
 .card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
 }
 
 .card:hover::before {
@@ -35,50 +42,74 @@
 }
 
 .card:hover {
-  transform: scale(1.02) translateY(-2px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02) translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  border-color: rgba(148, 163, 184, 0.2);
 }
 
 .card:active {
   transform: scale(0.98);
 }
 
-/* Existing background gradients */
+/* Platform-specific accent colors (subtle) */
 .instagram {
-  background: linear-gradient(135deg, #e91e63, #9c27b0);
+  --accent-color: #e91e63;
+  --accent-glow: rgba(233, 30, 99, 0.1);
 }
 
 .youtube {
-  background: linear-gradient(135deg, #f44336, #d32f2f);
+  --accent-color: #ff0000;
+  --accent-glow: rgba(255, 0, 0, 0.1);
 }
 
 .portfolio {
-  background: linear-gradient(135deg, #2196f3, #3f51b5);
+  --accent-color: #2196f3;
+  --accent-glow: rgba(33, 150, 243, 0.1);
 }
 
 .blog {
-  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  --accent-color: #4caf50;
+  --accent-glow: rgba(76, 175, 80, 0.1);
 }
 
 .random {
-  background: linear-gradient(135deg, #ff9800, #f57c00);
+  --accent-color: #ff9800;
+  --accent-glow: rgba(255, 152, 0, 0.1);
 }
 
-/* New background gradients */
 .studybuddy {
-  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  --accent-color: #00bcd4;
+  --accent-glow: rgba(0, 188, 212, 0.1);
 }
 
 .wordrush {
-  background: linear-gradient(135deg, #9c27b0, #673ab7);
+  --accent-color: #9c27b0;
+  --accent-glow: rgba(156, 39, 176, 0.1);
 }
 
 .photobooth {
-  background: linear-gradient(135deg, #ff5722, #e64a19);
+  --accent-color: #ff5722;
+  --accent-glow: rgba(255, 87, 34, 0.1);
 }
 
 .artgallery {
-  background: linear-gradient(135deg, #e91e63, #ad1457);
+  --accent-color: #e91e63;
+  --accent-glow: rgba(233, 30, 99, 0.1);
+}
+
+/* Hover effects with platform colors */
+.card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2), 0 0 0 1px var(--accent-glow);
+}
+
+.card:hover .accentLine {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.card:hover .icon {
+  color: var(--accent-color);
+  transform: scale(1.1);
 }
 
 .iconContainer {
@@ -86,28 +117,65 @@
   left: 24px;
   top: 50%;
   transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(148, 163, 184, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.card:hover .iconContainer {
+  background: var(--accent-glow);
+  box-shadow: 0 4px 12px var(--accent-glow);
 }
 
 .icon {
-  color: white;
-  font-size: 32px;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  color: #cbd5e1;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .content {
-  margin-left: 64px;
+  margin-left: 80px;
   color: white;
+  flex: 1;
 }
 
 .title {
   font-weight: 600;
   font-size: 1.125rem;
   margin-bottom: 4px;
+  color: #fff;
+  transition: color 0.3s ease;
 }
 
 .description {
   font-size: 0.875rem;
-  opacity: 0.9;
+  color: #94a3b8;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.card:hover .description {
+  color: #cbd5e1;
+}
+
+/* Subtle accent line for platform identification */
+.accentLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-color), transparent);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease;
 }
 
 @keyframes fadeInUp {
@@ -117,29 +185,148 @@
   }
 }
 
-@media (max-width: 480px) {
+/* Responsive Design */
+@media (max-width: 768px) {
   .card {
     padding: 20px;
     min-height: 70px;
   }
-  
+
   .iconContainer {
     left: 20px;
+    width: 44px;
+    height: 44px;
   }
-  
+
   .icon {
-    font-size: 28px;
+    font-size: 22px;
   }
-  
+
   .content {
-    margin-left: 56px;
+    margin-left: 76px;
   }
-  
+
   .title {
     font-size: 1rem;
   }
-  
+
   .description {
     font-size: 0.8rem;
   }
 }
+
+@media (max-width: 480px) {
+  .card {
+    padding: 18px;
+    min-height: 64px;
+  }
+
+  .iconContainer {
+    left: 18px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .content {
+    margin-left: 70px;
+  }
+
+  .title {
+    font-size: 0.95rem;
+  }
+
+  .description {
+    font-size: 0.75rem;
+  }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: rgba(15, 23, 42, 0.9);
+    border-color: rgba(148, 163, 184, 0.08);
+  }
+
+  .card:hover {
+    border-color: rgba(148, 163, 184, 0.15);
+  }
+
+  .iconContainer {
+    background: rgba(148, 163, 184, 0.08);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .container,
+  .card,
+  .icon,
+  .iconContainer,
+  .accentLine {
+    animation: none;
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card:hover .icon {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .card {
+    border-width: 2px;
+    border-color: #64748b;
+  }
+
+  .card:hover {
+    border-color: var(--accent-color);
+  }
+
+  .title {
+    color: #fff;
+  }
+
+  .description {
+    color: #e2e8f0;
+  }
+
+  .icon {
+    color: #f1f5f9;
+  }
+}
+
+/* Focus states for accessibility */
+.container:focus-visible .card {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Loading state */
+.card.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.card.loading .iconContainer {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+

@@ -15,8 +15,22 @@
   --bg-color: #0f172a;
   --font-stack: "Poppins", sans-serif;
   --text-color: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
   --accent-color: #67e8f9;
+  --surface-color: #1e293b;
+  --surface-hover: #334155;
+  --border-color: rgba(148, 163, 184, 0.1);
+  --border-hover: rgba(148, 163, 184, 0.2);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   --transition: all 0.2s ease;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
 }
 
 /* Base Styles */
@@ -100,7 +114,8 @@ input:focus-visible {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -113,7 +128,8 @@ input:focus-visible {
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(-25%);
     animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
@@ -121,6 +137,44 @@ input:focus-visible {
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
+}
+
+/* Glass morphism utility */
+.glass {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.glass-hover:hover {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+/* Card utilities */
+.card-base {
+  background: var(--surface-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Text utilities */
+.text-primary {
+  color: var(--text-color);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
 }
 
 /* Responsive Typography */
@@ -153,13 +207,42 @@ input:focus-visible {
   :root {
     --bg-color: #000000;
     --text-color: #ffffff;
+    --surface-color: #1a1a1a;
+    --border-color: rgba(255, 255, 255, 0.2);
   }
 }
 
-/* Dark Mode Support */
+/* Dark Mode Support (enhanced) */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #0f172a;
     --text-color: #f1f5f9;
+    --surface-color: #1e293b;
+    --surface-hover: #334155;
   }
+}
+
+/* Light mode override (for future use) */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --surface-color: #f8fafc;
+    --surface-hover: #f1f5f9;
+    --border-color: rgba(30, 41, 59, 0.1);
+    --border-hover: rgba(30, 41, 59, 0.2);
+  }
+}
+
+/* Selection styling */
+::selection {
+  background: var(--accent-color);
+  color: var(--bg-color);
+}
+
+::-moz-selection {
+  background: var(--accent-color);
+  color: var(--bg-color);
 }

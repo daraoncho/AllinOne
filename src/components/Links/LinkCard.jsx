@@ -8,7 +8,7 @@ const LinkCard = ({ link, index }) => {
       className={styles.container}
       style={{ '--index': index, animationDelay: `${0.8 + index * 0.1}s` }}
     >
-      <div className={`${styles.card} ${styles[link.bgColor]}`}>
+      <div className={`${styles.card} ${styles[link.bgColor]}`} data-platform={link.bgColor}>
         <div className={styles.iconContainer}>
           <IconRenderer 
             name={link.icon} 
@@ -20,6 +20,9 @@ const LinkCard = ({ link, index }) => {
           <h3 className={styles.title}>{link.title}</h3>
           <p className={styles.description}>{link.description}</p>
         </div>
+
+        {/* Subtle accent line for platform identification */}
+        <div className={styles.accentLine}></div>
       </div>
     </a>
   );
