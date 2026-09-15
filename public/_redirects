@@ -1,4 +1,7 @@
+# Serve the app under /links (for portfolio proxy + assets)
 /links/assets/*   /assets/:splat   200
 /links            /index.html      200
 /links/*          /index.html      200
-/                 https://adebayooluwadarasimi.com/links   301
+
+# Send direct netlify.app visitors to your real URL
+/                 https://adebayooluwadarasimi.com/links   301!
