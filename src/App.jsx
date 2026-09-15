@@ -20,10 +20,13 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  const basename =
+    import.meta.env.BASE_URL === '/' ? undefined : import.meta.env.BASE_URL.replace(/\/$/, '');
+
   return (
     <LazyMotion features={domAnimation}>
       <div className="App">
-        <Router>
+        <Router basename={basename}>
           <ScrollToTop />
           <main>
             <Routes>
